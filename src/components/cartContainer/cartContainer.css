@@ -1,0 +1,19 @@
+.emptyBag {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btnFooter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cartTotal h4 {
+  text-transform: capitalize;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
