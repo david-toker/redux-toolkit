@@ -1,7 +1,11 @@
-.emptyBag {
+.cartHeader {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.cartHeader h2 {
+  text-transform: uppercase;
 }
 
 .btnFooter {
