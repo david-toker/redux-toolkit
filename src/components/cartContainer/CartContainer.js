@@ -38,7 +38,7 @@ const CartContainer = () => {
           <div className='cartTotal'>
             <h4>
               <span>total</span>
-              <span>${total}</span>
+              <span>${total.toFixed(2)}</span>
             </h4>
           </div>
           <div className='btnFooter'>
