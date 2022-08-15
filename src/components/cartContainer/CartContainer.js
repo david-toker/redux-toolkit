@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { clearCart } from '../../redux/cart/cartSlice';
+import { openModal } from '../../redux/modal/modalSlice';
 import CartItem from '../cartItem/CartItem';
 import Stack from '@mui/material/Stack';
 import Container from '@mui/material/Container';
@@ -42,7 +42,7 @@ const CartContainer = () => {
             </h4>
           </div>
           <div className='btnFooter'>
-          <Button variant="outlined" color="error" onClick={()=>dispatch(clearCart())}>
+          <Button variant="outlined" color="error" onClick={()=>dispatch(openModal())}>
             clear cart
           </Button>
           </div>
