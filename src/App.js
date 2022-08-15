@@ -26,11 +26,11 @@ function App() {
   }
 
   return (
-    <div className="">
+    <>
       <ModalNotification />
       <Navbar />
       <CartContainer />
-    </div>
+    </>
   );
 }
 

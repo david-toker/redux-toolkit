@@ -10,12 +10,12 @@ import './cartContainer.css';
 
 const CartContainer = () => {
   const dispatch = useDispatch();
-  const { cartItems, total, amount } = useSelector(state => state.cart);
+  const { cartItems, total, amount } = useSelector((state) => state.cart);
 
   if (amount < 1) {
     return (
       <Container maxWidth="sm">
-        <header className='cartHeader' >
+        <header className="cartHeader">
           <h2>your bag</h2>
           <h4>is currently empty</h4>
         </header>
@@ -25,7 +25,7 @@ const CartContainer = () => {
   return (
     <div>
       <Container maxWidth="sm">
-        <header className='cartHeader'>
+        <header className="cartHeader">
           <h2>your bag</h2>
         </header>
         <Stack spacing={2}>
@@ -33,23 +33,27 @@ const CartContainer = () => {
             return <CartItem key={item.id} {...item} />;
           })}
         </Stack>
-        <footer className=''>
+        <footer>
           <hr />
-          <div className='cartTotal'>
+          <div className="cartTotal">
             <h4>
               <span>total</span>
               <span>${total.toFixed(2)}</span>
             </h4>
           </div>
-          <div className='btnFooter'>
-          <Button variant="outlined" color="error" onClick={()=>dispatch(openModal())}>
-            clear cart
-          </Button>
+          <div className="btnFooter">
+            <Button
+              variant="outlined"
+              color="error"
+              onClick={() => dispatch(openModal())}
+            >
+              clear cart
+            </Button>
           </div>
         </footer>
       </Container>
     </div>
   );
-}
+};
 
-export default CartContainer
+export default CartContainer;

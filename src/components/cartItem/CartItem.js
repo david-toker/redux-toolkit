@@ -21,7 +21,7 @@ const CartItem = (props) => {
 
   return (
     <div className="cartItem">
-      <div className='cartItemInfo'>
+      <div className="cartItemInfo">
         <img src={img} alt={title} />
         <div className="cartInfo">
           <h4>{title}</h4>
@@ -30,8 +30,12 @@ const CartItem = (props) => {
         </div>
       </div>
 
-      <div className='changeAmount'>
-        <IconButton aria-label="add" size="small" onClick={() => dispatch(increase({id}))}>
+      <div className="changeAmount">
+        <IconButton
+          aria-label="add"
+          size="small"
+          onClick={() => dispatch(increase({ id }))}
+        >
           <ExpandLessIcon fontSize="inherit" />
         </IconButton>
         <p>{amount}</p>
